@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/laolu87/componentization-dome/issues"
   },
-  "homepage": "https://github.com/laolu87/componentization-dome#readme"
+  "homepage": "https://github.com/laolu87/componentization-dome#readme",
+  "peerDependencies": {
+    "react": "~15.1.0"
+  }
 }
