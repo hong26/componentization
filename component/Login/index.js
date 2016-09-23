@@ -1,64 +1,98 @@
-import React from 'react'
-require('./style.css')
+'use strict';
 
-let Login = React.createClass({
-  getInitialState(){
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+require('./style.css');
+
+var Login = _react2.default.createClass({
+  displayName: 'Login',
+  getInitialState: function getInitialState() {
     return {
-      checked: false,
-    }
+      checked: false
+    };
   },
-
-  componentDidMount(){
-    if(!!localStorage.getItem('username')){
+  componentDidMount: function componentDidMount() {
+    if (!!localStorage.getItem('username')) {
       this.setState({
-        checked: true,
-      })
+        checked: true
+      });
     }
   },
-
-  handleSubmit(event){
-    event.preventDefault()
-    let obj={}
-    obj.username = this.refs.username.value
-    obj.password = this.refs.password.value
-    this.props.handlesubmit(obj)
+  handleSubmit: function handleSubmit(event) {
+    event.preventDefault();
+    var obj = {};
+    obj.username = this.refs.username.value;
+    obj.password = this.refs.password.value;
+    this.props.handlesubmit(obj);
   },
-
-
-  onChange(event){
-    if(this.refs.check.checked){
-      localStorage.setItem('username', this.refs.username.value)
+  onChange: function onChange(event) {
+    if (this.refs.check.checked) {
+      localStorage.setItem('username', this.refs.username.value);
       this.setState({
-        checked: true,
-      })
-    }else{
-      localStorage.removeItem('username')
+        checked: true
+      });
+    } else {
+      localStorage.removeItem('username');
       this.setState({
-        checked: false,
-      })
+        checked: false
+      });
     }
   },
-
-  newChange(){
-    if(this.state.checked){
-      localStorage.setItem('username', this.refs.username.value)
-    }else{
-      return
+  newChange: function newChange() {
+    if (this.state.checked) {
+      localStorage.setItem('username', this.refs.username.value);
+    } else {
+      return;
     }
   },
-
-  render(){
-    return (
-        <div className='login-box'>
-          <form onSubmit={this.handleSubmit}>
-            <div className='login-input-username'><input type='text' ref='username' placeholder='请输入账号' className='login-input' defaultValue={localStorage.getItem('username')} onChange={this.newChange}/></div>
-            <div className='login-input-password'><input type='password' ref='password' placeholder='请输入密码' className='login-input' /></div>
-            <div className='login-div-input-checkbox'><input type='checkbox' className='login-input-checkbox' ref='check' checked = {this.state.checked} onChange={this.onChange} /><span>记住账号</span> </div>
-            <div className='login-div-button'><button className='login-button'>登 陆</button></div>
-          </form>
-        </div>
-    )
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      { className: 'login-box' },
+      _react2.default.createElement(
+        'form',
+        { onSubmit: this.handleSubmit },
+        _react2.default.createElement(
+          'div',
+          { className: 'login-input-username' },
+          _react2.default.createElement('input', { type: 'text', ref: 'username', placeholder: '请输入账号', className: 'login-input', defaultValue: localStorage.getItem('username'), onChange: this.newChange })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'login-input-password' },
+          _react2.default.createElement('input', { type: 'password', ref: 'password', placeholder: '请输入密码', className: 'login-input' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'login-div-input-checkbox' },
+          _react2.default.createElement('input', { type: 'checkbox', className: 'login-input-checkbox', ref: 'check', checked: this.state.checked, onChange: this.onChange }),
+          _react2.default.createElement(
+            'span',
+            null,
+            '记住账号'
+          ),
+          ' '
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'login-div-button' },
+          _react2.default.createElement(
+            'button',
+            { className: 'login-button' },
+            '登 陆'
+          )
+        )
+      )
+    );
   }
-})
+});
 
-export default Login
+exports.default = Login;
