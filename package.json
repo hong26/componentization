@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/laolu87/componentization-dome#readme",
   "peerDependencies": {
-    "react": "~15.1.0"
+    "react": "^15.0.0"
   }
 }
