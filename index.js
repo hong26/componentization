@@ -1,1 +1,1 @@
-export let Login = require('./component/Login')
+export let Loginaa = require('./component/Login')

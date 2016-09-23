@@ -1,9 +1,7 @@
 import React from 'react'
-import {set_checked} from '../../actions/token.js'
-import  { Input } from 'antd'
 require('./style.css')
 
-module.exports = React.createClass({
+let Login = React.createClass({
   getInitialState(){
     return {
       checked: false,
@@ -63,3 +61,4 @@ module.exports = React.createClass({
   }
 })
 
+export default Login
