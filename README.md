@@ -87,6 +87,12 @@ export default Loginbox
 
 #### Select组件
 ```
+参数:
+options:下拉的菜单内容,数组
+defaultValue:默认选中项(可选参数,没有这个参数时默认选中项为第一项)
+onChange:选中时触发的函数,拥有一个value参数,为当前选中项的value值.
+
+
 示例:
 import React from 'react'
 import {Select} from 'componentization-dome'
