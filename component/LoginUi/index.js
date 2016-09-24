@@ -15,17 +15,40 @@ require('./style.css');
 
 var LoginUi = exports.LoginUi = _react2.default.createClass({
   displayName: 'LoginUi',
+  handleSubmit: function handleSubmit(event) {
+    event.preventDefault();
+    var obj = {};
+    obj.username = this.refs.username.value;
+    obj.password = this.refs.password.value;
+    this.props.handlesubmit(obj);
+  },
+  onChange: function onChange(event) {
+    if (this.refs.check.checked) {
+      localStorage.setItem('username', this.refs.username.value);
+      this.props.setChecked(true);
+    } else {
+      localStorage.removeItem('username');
+      this.props.setChecked(false);
+    }
+  },
+  newChange: function newChange() {
+    if (this.props.checked) {
+      localStorage.setItem('username', this.refs.username.value);
+    } else {
+      return;
+    }
+  },
   render: function render() {
     return _react2.default.createElement(
       'div',
       { className: 'login-box' },
       _react2.default.createElement(
         'form',
-        { onSubmit: this.props.handleSubmit },
+        { onSubmit: this.handleSubmit },
         _react2.default.createElement(
           'div',
           { className: 'login-input-username' },
-          _react2.default.createElement('input', { type: 'text', ref: 'username', placeholder: '请输入账号', className: 'login-input', defaultValue: localStorage.getItem('username'), onChange: this.props.newChange })
+          _react2.default.createElement('input', { type: 'text', ref: 'username', placeholder: '请输入账号', className: 'login-input', defaultValue: localStorage.getItem('username'), onChange: this.newChange })
         ),
         _react2.default.createElement(
           'div',
@@ -35,7 +58,7 @@ var LoginUi = exports.LoginUi = _react2.default.createClass({
         _react2.default.createElement(
           'div',
           { className: 'login-div-input-checkbox' },
-          _react2.default.createElement('input', { type: 'checkbox', className: 'login-input-checkbox', ref: 'check', checked: this.props.checked, onChange: this.props.onChange }),
+          _react2.default.createElement('input', { type: 'checkbox', className: 'login-input-checkbox', ref: 'check', checked: this.props.checked, onChange: this.onChange }),
           _react2.default.createElement(
             'span',
             null,
