@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Login = undefined;
 
 var _react = require('react');
 
@@ -12,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 require('./style.css');
 
-var Login = _react2.default.createClass({
+var Login = exports.Login = _react2.default.createClass({
   displayName: 'Login',
   getInitialState: function getInitialState() {
     return {
@@ -94,5 +95,3 @@ var Login = _react2.default.createClass({
     );
   }
 });
-
-exports.default = Login;

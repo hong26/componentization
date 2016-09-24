@@ -1,7 +1,7 @@
 import React from 'react'
 require('./style.css')
 
-let Login = React.createClass({
+export let Login = React.createClass({
   getInitialState(){
     return {
       checked: false,
@@ -61,4 +61,3 @@ let Login = React.createClass({
   }
 })
 
-export default Login
