@@ -85,6 +85,38 @@ let Loginbox = React.createClass({
 export default Loginbox
 ```
 
+#### Select组件
+```
+示例:
+import React from 'react'
+import {Select} from 'componentization-dome'
+let SelectTest = React.createClass({
+  getInitialState(){
+    return {
+      select:[
+        {value:1, children:'Volvo'},
+        {value:2, children:'saad'},
+        {value:3, children:'opel'},
+        {value:4, children:'Audi'}
+      ],
+      value:4
+    }
+  },
+
+  onChange(value){
+    console.log(value)
+  },
+
+  render(){
+    return (
+      <div><Select options={this.state.select} defaultValue={this.state.value} onChange={this.onChange}/></div>
+    )
+  }
+})
+
+export default SelectTest
+```
+
 
 
 
