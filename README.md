@@ -128,6 +128,6 @@ let SelectTest = React.createClass({
 export default SelectTest
 ```
 
-
+?paths=node_modules&resolve url
 
 
