@@ -1,2 +1,2 @@
-require('./login.css')
-require('./loginui.css')
+exports.login=require('./login.css')
+exports.loginui=require('./loginui.css')
