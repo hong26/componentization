@@ -11,8 +11,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-require('./style.css');
-
 var LoginUi = exports.LoginUi = _react2.default.createClass({
   displayName: 'LoginUi',
   handleSubmit: function handleSubmit(event) {

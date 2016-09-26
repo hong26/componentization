@@ -11,8 +11,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-require('./style.css');
-
 var Login = exports.Login = _react2.default.createClass({
   displayName: 'Login',
   getInitialState: function getInitialState() {
