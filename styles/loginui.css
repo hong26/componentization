@@ -1,1 +1,53 @@
-.login-box{width:23em;height:17em;background-color:#57c5f7;border-radius:4%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.login-input-username{text-align:center;margin-top:3em}.login-input-password{text-align:center;margin-top:1em}.login-div-input-checkbox{margin-top:1em;margin-left:4em;}.login-div-input-checkbox span{font-size:14px;color:#4a4a4a}.login-input-checkbox{width:1.2em;height:1.2em;background-color:#fff}.login-button{width:5em;background-color:#fff;border:0;color:#4a4a4a}.login-div-button{margin-top:1em;text-align:center}.login-input{height:2em;width:60%;background-color:transparent;border:0;border-bottom:1px solid #979797;outline:none}.login-input::-webkit-input-placeholder{color:#4a4a4a;padding-left:1.5em}
+.login-box {
+  width: 23em;
+  height: 17em;
+  background-color: #57c5f7;
+  border-radius: 4%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-input-username {
+  text-align: center;
+  margin-top: 3em;
+}
+.login-input-password {
+  text-align: center;
+  margin-top: 1em;
+}
+.login-div-input-checkbox {
+  margin-top: 1em;
+  margin-left: 4em;
+}
+.login-div-input-checkbox span {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+.login-input-checkbox {
+  width: 1.2em;
+  height: 1.2em;
+  background-color: #fff;
+}
+.login-button {
+  width: 5em;
+  background-color: #fff;
+  border: 0px;
+  color: #4a4a4a;
+}
+.login-div-button {
+  margin-top: 1em;
+  text-align: center;
+}
+.login-input {
+  height: 2em;
+  width: 60%;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 1px solid #979797;
+  outline: none;
+}
+.login-input::-webkit-input-placeholder {
+  color: #4a4a4a;
+  padding-left: 1.5em;
+}
