@@ -13,14 +13,18 @@ npm uninstall --save componentization-dome
 ### 引入组件
 ```
 import {Login} from 'componentization-dome'
+require('componentization-dome/styles/login.css')
 //或
 import {Login} from 'componentization-dome/component/Login'
+require('componentization-dome/styles/login.css')
 ```
 
 #### Login组件,带状态(ui+state状态处理了记住账号的逻辑)
 ```
 import React from 'react'
 import {Login} from 'componentization-dome'
+require('componentization-dome/styles/login.css')
+
 let Loginbox = React.createClass({
 //按空格键或者点击登陆按钮会触发这个函数
   handlesubmit(value){
@@ -50,6 +54,7 @@ export default Loginbox
 //示例:
 import React from 'react'
 import {LoginUi} from 'componentization-dome'
+require('componentization-dome/styles/loginui.css')
 let Loginbox = React.createClass({
   getInitialState(){
     return {
