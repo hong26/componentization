@@ -10,6 +10,20 @@ npm install --save laolu87/componentization-dome
 npm uninstall --save componentization-dome
 ```
 
+### webpack设置文件添加对css文件支持(如果没有的话)
+```
+//npm 安装style-loader和css-loader
+npm install --save-dev style-loader css-loader
+
+//在webpack.config.js里面的loaders里面添加css文件支持
+    loaders: [
+        {
+        test: /\.css$/,
+        loader: 'style!css'
+      }
+    ]
+```
+
 ### 引入组件
 ```
 import {Login} from 'componentization-dome'
@@ -127,7 +141,3 @@ let SelectTest = React.createClass({
 
 export default SelectTest
 ```
-
-?paths=node_modules&resolve url
-
-
