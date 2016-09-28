@@ -1,13 +1,13 @@
-# componentization-dome
+# componentization
 
 ### 安装
 ```
-npm install --save laolu87/componentization-dome
+npm install --save laolu87/componentization
 ```
 
 ### 删除
 ```
-npm uninstall --save componentization-dome
+npm uninstall --save componentization
 ```
 
 ### webpack设置文件添加对css文件支持(如果没有的话)
@@ -26,18 +26,18 @@ npm install --save-dev style-loader css-loader
 
 ### 引入组件
 ```
-import {Login} from 'componentization-dome'
-require('componentization-dome/styles/login.css')
+import {Login} from 'componentization'
+require('componentization/styles/login.css')
 //或
-import {Login} from 'componentization-dome/component/Login'
-require('componentization-dome/styles/login.css')
+import {Login} from 'componentization/component/Login'
+require('componentization/styles/login.css')
 ```
 
 #### Login组件,带状态(ui+state状态处理了记住账号的逻辑)
 ```
 import React from 'react'
-import {Login} from 'componentization-dome'
-require('componentization-dome/styles/login.css')
+import {Login} from 'componentization'
+require('componentization/styles/login.css')
 
 let Loginbox = React.createClass({
 //按空格键或者点击登陆按钮会触发这个函数
@@ -67,8 +67,8 @@ export default Loginbox
 
 //示例:
 import React from 'react'
-import {LoginUi} from 'componentization-dome'
-require('componentization-dome/styles/loginui.css')
+import {LoginUi} from 'componentization'
+require('componentization/styles/loginui.css')
 let Loginbox = React.createClass({
   getInitialState(){
     return {
@@ -114,7 +114,7 @@ onChange:选中时触发的函数,拥有一个value参数,为当前选中项的v
 
 示例:
 import React from 'react'
-import {Select} from 'componentization-dome'
+import {Select} from 'componentization'
 let SelectTest = React.createClass({
   getInitialState(){
     return {
