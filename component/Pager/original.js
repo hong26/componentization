@@ -15,6 +15,10 @@ export let Pager = React.createClass({
     }
   },
 
+  componentWillMount(){
+    this.getpages(this.props.total,this.props.pageSize)
+  },
+
   getpages(total,pageSize){
     let num=Math.ceil(total/pageSize)
     if(total!=0&&pageSize!=0){
@@ -30,6 +34,12 @@ export let Pager = React.createClass({
   },
   onClick(item){
     this.props.onClick(item)
+  },
+  propTypes: {
+  total: React.PropTypes.number,
+  pageSize: React.PropTypes.number,
+  current: React.PropTypes.number,
+  onClick: React.PropTypes.func
   },
 
   render(){

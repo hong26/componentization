@@ -26,6 +26,9 @@ var Pager = exports.Pager = _react2.default.createClass({
       this.getpages(this.props.total, this.props.pageSize);
     }
   },
+  componentWillMount: function componentWillMount() {
+    this.getpages(this.props.total, this.props.pageSize);
+  },
   getpages: function getpages(total, pageSize) {
     var num = Math.ceil(total / pageSize);
     if (total != 0 && pageSize != 0) {
@@ -42,6 +45,14 @@ var Pager = exports.Pager = _react2.default.createClass({
   onClick: function onClick(item) {
     this.props.onClick(item);
   },
+
+  propTypes: {
+    total: _react2.default.PropTypes.number,
+    pageSize: _react2.default.PropTypes.number,
+    current: _react2.default.PropTypes.number,
+    onClick: _react2.default.PropTypes.func
+  },
+
   render: function render() {
     var _this = this;
 
