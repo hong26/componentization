@@ -69,6 +69,7 @@ export default PagerTest
 ```
 
 #### Login组件,带状态(ui+state状态处理了记住账号的逻辑)
+![login](./images/login.png)
 ```
 import React from 'react'
 import {Login} from 'componentization'
@@ -93,6 +94,7 @@ export default Loginbox
 ```
 
 #### LoginUi组件(Login组件的无state实现)
+![login](./images/login.png)
 ```
 //由于无状态,状态应该自行定义:
 //接收三个必选参数
@@ -140,6 +142,7 @@ export default Loginbox
 ```
 
 #### Select组件
+![select](./images/select.png)
 ```
 参数:
 options:下拉的菜单内容,数组
