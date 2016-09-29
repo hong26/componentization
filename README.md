@@ -33,6 +33,41 @@ import {Login} from 'componentization/component/Login'
 require('componentization/styles/login.css')
 ```
 
+### pager组件(分页组件)
+![pager](./images/pager.png)
+```
+参数:
+total: 总条目数      Number类型
+pageSize: 每页显示的条目数     Number类型
+current: 当前页码,必须是大于零的整数     Number类型
+onClick: 点击页面触发的函数,拥有一个被点击页码数的参数    Function类型
+
+
+示例:
+import React from 'react'
+import {Pager} from 'componentization'
+require('componentization/styles/pager.css')
+let PagerTest = React.createClass({
+  getInitialState(){
+    return {
+      currentpage: 1
+    }
+  },
+  onClick(page){
+    this.setState({
+      currentpage: page
+    })
+  },
+  render(){
+    return (
+      <div style={{textAlign: 'center'}}><Pager total={200000} pageSize={5} current={this.state.currentpage} onClick={this.onClick} /></div>
+    )
+  }
+})
+
+export default PagerTest
+```
+
 #### Login组件,带状态(ui+state状态处理了记住账号的逻辑)
 ```
 import React from 'react'
@@ -140,38 +175,4 @@ let SelectTest = React.createClass({
 })
 
 export default SelectTest
-```
-
-### pager组件(分页组件)
-```
-参数:
-total: 总条目数      Number类型
-pageSize: 每页显示的条目数     Number类型
-current: 当前页码,必须是大于零的整数     Number类型
-onClick: 点击页面触发的函数,拥有一个被点击页码数的参数    Function类型
-
-
-示例:
-import React from 'react'
-import {Pager} from 'componentization'
-require('componentization/styles/pager.css')
-let PagerTest = React.createClass({
-  getInitialState(){
-    return {
-      currentpage: 1
-    }
-  },
-  onClick(page){
-    this.setState({
-      currentpage: page
-    })
-  },
-  render(){
-    return (
-      <div style={{textAlign: 'center'}}><Pager total={200000} pageSize={5} current={this.state.currentpage} onClick={this.onClick} /></div>
-    )
-  }
-})
-
-export default PagerTest
 ```
