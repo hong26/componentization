@@ -174,7 +174,7 @@ let SelectTest = React.createClass({
 
   render(){
     return (
-      <div><Select options={this.state.select} defaultValue={this.state.value} onChange={this.onChange}/></div>
+      <div style={{textAlign:'center'}}><Select options={this.state.select} defaultValue={this.state.value} onChange={this.onChange} style={{padding:'0 2em'}}/></div>
     )
   }
 })
