@@ -26,7 +26,7 @@ var Select = exports.Select = _react2.default.createClass({
     });
     return _react2.default.createElement(
       'select',
-      { defaultValue: this.props.defaultValue, onChange: this.onChange, ref: 'select' },
+      { defaultValue: this.props.defaultValue, onChange: this.onChange, ref: 'select', className: this.props.className, style: this.props.style },
       select
     );
   }

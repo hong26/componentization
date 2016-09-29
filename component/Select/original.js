@@ -9,7 +9,7 @@ export let Select = React.createClass({
       return <option key={key} value={item.value}>{item.children}</option>
     })
     return (
-      <select defaultValue={this.props.defaultValue} onChange={this.onChange} ref='select'>
+      <select defaultValue={this.props.defaultValue} onChange={this.onChange} ref='select' className={this.props.className} style={this.props.style}>
         {select}
       </select>
     )
