@@ -68,6 +68,52 @@ let PagerTest = React.createClass({
 export default PagerTest
 ```
 
+### PopUp组件(弹出式遮罩层)
+![popup](./images/popup1.png)
+![popup](./images/popup.png)
+![popup](./images/popup2.png)
+```
+使用
+给PopUp组件定义一个ref属性,然后调用
+this.refs.{ref}.showPopUp()这个函数来弹出遮罩层.
+
+参数
+background: 透明遮罩层的背景颜色
+showPopUp(): 打开遮罩层的函数.
+
+示例:
+import React from 'react'
+import {PopUp} from 'componentization'
+let PopupTest = React.createClass({
+  onBox1(){
+    console.log('1')
+    this.refs.box1.showPopUp()
+  },
+
+  onBox2(){
+    console.log('2')
+    this.refs.box2.showPopUp()
+  },
+  render(){
+    return (
+      <div>
+        <PopUp ref='box1' background='#586'>
+          <div style={{width: '10em', height:'10em', backgroundColor:'#FFF'}} >这个是box1</div>
+        </PopUp>
+        <input type='button' onClick={this.onBox1} value='box1' />
+        <PopUp ref='box2'>
+          <img src='/assets/photo-1445540393741-e3153d003d66.jpeg' style={{width:'300px', height: '250px'}} />
+        </PopUp>
+         <input type='button' onClick={this.onBox2} value='box2' />
+      </div>
+    )
+  }
+})
+
+export default PopupTest
+```
+
+
 #### Login组件,带状态(ui+state状态处理了记住账号的逻辑)
 ![login](./images/login.png)
 ```
